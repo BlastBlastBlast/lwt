@@ -25,6 +25,24 @@ section {
     text-decoration: none;
 }
 
+/* Fixed height for animated text container */
+.fluidz-48 {
+    min-height: 5rem; /* Adjust this value based on your font size */
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start; /* Changed from center to flex-start */
+    text-align: left; /* Changed from center to left */
+    width: 100%;
+    padding: 0.5rem 0; /* Add some vertical padding */
+}
+
+/* Typewriter container */
+.Typewriter {
+    display: inline-block;
+    text-align: left; /* Changed from center to left */
+    width: 100%;
+}
+
 .btn-about a {
     color: var(--text-color);
     text-decoration: none;

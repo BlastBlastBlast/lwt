@@ -1,0 +1,29 @@
+.simple-cursor {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease-out, width 0.2s, height 0.2s;
+  will-change: transform;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Hide cursor when clicking */
+.simple-cursor:active {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+/* Hide default cursor */
+html, body {
+  cursor: none;
+}
+
+/* Remove default cursor on all elements */
+* {
+  cursor: none !important;
+}

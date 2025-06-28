@@ -25,15 +25,27 @@ export const Home = () => {
                 <h2 className="mb-1x">{introdata.title}</h2>
                 <h1 className="fluidz-48 mb-1x">
                   <Typewriter
+                    onInit={(typewriter) => {
+                      typewriter
+                        .typeString(introdata.animated.first)
+                        .pauseFor(1000)
+                        .deleteAll()
+                        .typeString(introdata.animated.second)
+                        .pauseFor(1000)
+                        .deleteAll()
+                        .typeString(introdata.animated.third)
+                        .pauseFor(1000)
+                        .start();
+                    }}
                     options={{
-                      strings: [
-                        introdata.animated.first,
-                        introdata.animated.second,
-                        introdata.animated.third,
-                      ],
                       autoStart: true,
                       loop: true,
-                      deleteSpeed: 10,
+                      typeSpeed: 30,
+                      deleteSpeed: 15,
+                      delay: 50,
+                      cursor: '|',
+                      wrapperClassName: 'Typewriter__wrapper',
+                      cursorClassName: 'Typewriter__cursor'
                     }}
                   />
                 </h1>

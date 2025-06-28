@@ -7,18 +7,19 @@ const meta = {
 const introdata = {
     title: "I'm Lars Wien Tynes",
     animated: {
-        first: "I solve complex problems",
-        second: "I build amazing web experiences",
-        third: "I create efficient solutions",
+        first: "I build code and custom motorcycles",
+        second: "I’ve led teams, projects, and powder days",
+        third: "I blend logic, leadership, and a bit of grease",
     },
     description: "Welcome to my personal space where I share my work and thoughts on technology and development.",
     your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d",
 };
 
 const dataabout = {
-    title: "abit about my self",
-    aboutme: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis dolor id ligula semper elementum feugiat pretium nulla. Nunc non commodo dolor. Nunc mollis dignissim facilisis. Morbi ut magna ultricies.",
-};
+    title: "a bit about myself",
+    aboutme: "I solve problems — whether it’s a broken line of code, a logistics chain, or an old motorcycle. I’ve managed projects, led teams, and built tech with a purpose. These days I’m diving deep into programming, but I bring with me a toolbox full of real-world experience, creative grit, and way too many hex keys.",
+  };
+  
 const worktimeline = [{
         jobtitle: "Designer of week",
         where: "YAdfi",
