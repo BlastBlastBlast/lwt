@@ -2,6 +2,15 @@ import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
+import { 
+  FaJava, FaPython, FaJs, FaReact, FaNodeJs, FaGitAlt, FaDocker, FaAws, FaLinux, FaBootstrap, FaCode
+} from "react-icons/fa";
+import {
+  SiKotlin, SiTypescript, SiSpring, SiExpress, SiTailwindcss, SiPostgresql, SiMongodb, SiJavascript
+} from "react-icons/si";
+
+// Fix for C icon since it's not available in react-icons
+import { FaCode as FaCodeC } from "react-icons/fa";
 import {
   dataabout,
   meta,
@@ -9,6 +18,29 @@ import {
   skills,
   services,
 } from "../../content_option";
+
+// Icon mapping for dynamic icon rendering
+const iconComponents = {
+  'FaJava': FaJava,
+  'FaPython': FaPython,
+  'FaJs': SiJavascript, // Using SiJavascript for better icon
+  'FaReact': FaReact,
+  'FaNodeJs': FaNodeJs,
+  'FaGitAlt': FaGitAlt,
+  'FaDocker': FaDocker,
+  'FaAws': FaAws,
+  'FaLinux': FaLinux,
+  'FaBootstrap': FaBootstrap,
+  'FaCode': FaCode,
+  'FaCodeC': FaCodeC, // For C language
+  'SiKotlin': SiKotlin,
+  'SiTypescript': SiTypescript,
+  'SiSpring': SiSpring,
+  'SiExpress': SiExpress,
+  'SiTailwindcss': SiTailwindcss,
+  'SiPostgresql': SiPostgresql,
+  'SiMongodb': SiMongodb
+};
 
 export const About = () => {
   return (
@@ -57,26 +89,29 @@ export const About = () => {
         </Row>
         <Row className="sec_sp">
           <Col lg="5">
-            <h3 className="color_sec py-4">Skills</h3>
+            <h3 className="color_sec py-4">Technical Skills</h3>
           </Col>
           <Col lg="7">
-            {skills.map((data, i) => {
-              return (
-                <div key={i}>
-                  <h3 className="progress-title">{data.name}</h3>
-                  <div className="progress">
-                    <div
-                      className="progress-bar"
-                      style={{
-                        width: `${data.value}%`,
-                      }}
-                    >
-                      <div className="progress-value">{data.value}%</div>
-                    </div>
+            <div className="skills-container">
+              {skills.map((category, i) => (
+                <div key={i} className="skill-category mb-5">
+                  <h4 className="skill-category-title mb-3">{category.category}</h4>
+                  <div className="skills-list">
+                    {category.items.map((item, j) => {
+                      const IconComponent = iconComponents[item.icon];
+                      return (
+                        <div key={j} className="skill-item">
+                          <span className="skill-icon">
+                            {IconComponent && <IconComponent size={20} />}
+                          </span>
+                          <span className="skill-name">{item.name}</span>
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
-              );
-            })}
+              ))}
+            </div>
           </Col>
         </Row>
         <Row className="sec_sp">

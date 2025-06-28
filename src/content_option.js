@@ -37,26 +37,37 @@ const worktimeline = [{
     },
 ];
 
-const skills = [{
-        name: "Python",
-        value: 90,
+const skills = [
+    {
+        category: "Programming Languages",
+        items: [
+            { name: "Java", icon: "FaJava" },
+            { name: "Kotlin", icon: "SiKotlin" },
+            { name: "C", icon: "FaCodeC" }, // Using FaCodeC for C
+            { name: "Python", icon: "FaPython" },
+            { name: "JavaScript", icon: "FaJs" },
+            { name: "TypeScript", icon: "SiTypescript" }
+        ]
     },
     {
-        name: "Djano",
-        value: 85,
+        category: "Frameworks & Libraries",
+        items: [
+            { name: "React", icon: "FaReact" },
+            { name: "Node.js", icon: "FaNodeJs" },
+            { name: "Spring", icon: "SiSpring" },
+            { name: "Express", icon: "SiExpress" },
+            { name: "Tailwind CSS", icon: "SiTailwindcss" }
+        ]
     },
     {
-        name: "Javascript",
-        value: 80,
-    },
-    {
-        name: "React",
-        value: 60,
-    },
-    {
-        name: "Jquery",
-        value: 85,
-    },
+        category: "Tools & Technologies",
+        items: [
+            { name: "Git", icon: "FaGitAlt" },
+            { name: "Docker", icon: "FaDocker" },
+            { name: "AWS", icon: "FaAws" },
+            { name: "PostgreSQL", icon: "SiPostgresql" }
+        ]
+    }
 ];
 
 const services = [{
