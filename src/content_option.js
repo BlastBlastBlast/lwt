@@ -137,21 +137,20 @@ const dataportfolio = [{
 ];
 
 const contactConfig = {
-    YOUR_EMAIL: "name@domain.com",
-    YOUR_FONE: "(555)123-4567",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ",
-    // creat an emailjs.com account 
-    // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_id",
-    YOUR_TEMPLATE_ID: "template_id",
-    YOUR_USER_ID: "user_id",
+    YOUR_EMAIL: "lw.tynes@gmail.com",
+    YOUR_FONE: "+47 922 80 935",
+    // EmailJS configuration (optional)
+    // Create an account at https://www.emailjs.com/ to enable the contact form
+    YOUR_SERVICE_ID: "",
+    YOUR_TEMPLATE_ID: "",
+    YOUR_USER_ID: "",
 };
 
 const socialprofils = {
-    github: "https://github.com",
-    facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com",
-    twitter: "https://twitter.com",
+    github: "https://github.com/blastblastblast",
+    linkedin: "https://www.linkedin.com/in/wien/",
+    email: "mailto:lw.tynes@gmail.com",
+    phone: "tel:+4792280935"
 };
 export {
     meta,

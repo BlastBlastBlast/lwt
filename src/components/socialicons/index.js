@@ -2,29 +2,19 @@ import React from "react";
 import "./style.css";
 import {
   FaGithub,
-  FaTwitter,
-  FaFacebookF,
   FaLinkedin,
-  FaYoutube,
-  FaTwitch,
-  FaInstagram,
-  FaSnapchatGhost,
-  FaTiktok,
+  FaEnvelope,
+  FaPhone,
   FaCircle
 } from "react-icons/fa";
 import { socialprofils } from "../../content_option";
 
 const ICON_MAPPING = {
   default: FaCircle,
-  facebook: FaFacebookF,
   github: FaGithub,
-  instagram: FaInstagram,
   linkedin: FaLinkedin,
-  snapchat: FaSnapchatGhost,
-  tiktok: FaTiktok,
-  twitter: FaTwitter,
-  twitch: FaTwitch,
-  youtube: FaYoutube
+  email: FaEnvelope,
+  phone: FaPhone
 };
 
 export const Socialicons = (params) => {
@@ -33,16 +23,23 @@ export const Socialicons = (params) => {
       <ul>
         {Object.entries(socialprofils).map(([platform, url]) => {
           const IconComponent = ICON_MAPPING[platform] || ICON_MAPPING.default;
+          // Create a nice display name for the tooltip
+          const displayName = platform.charAt(0).toUpperCase() + platform.slice(1);
           return (
             <li key={platform}>
-              <a href={url}>
+              <a 
+                href={url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                data-tooltip={displayName}
+                aria-label={displayName}
+              >
                 <IconComponent />
               </a>
             </li>
           );
         })}
       </ul>
-      <p>Follow Me</p>
     </div>
   );
 };
