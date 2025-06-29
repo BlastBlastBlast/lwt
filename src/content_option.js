@@ -12,7 +12,7 @@ const introdata = {
         third: "I blend logic, leadership, and a bit of grease",
     },
     description: "Welcome to my personal space where I share my work and thoughts on technology and development.",
-    your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d",
+    your_img_url: "/img_assets/LWT_Transparent.png",
 };
 
 const dataabout = {
