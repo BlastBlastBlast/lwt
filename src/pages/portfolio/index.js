@@ -5,34 +5,39 @@ import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta } from "../../content_option";
 
 export const Portfolio = () => {
+  const handleScroll = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <HelmetProvider>
-      <Container className="About-header">
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title> Portfolio | {meta.title} </title>{" "}
-          <meta name="description" content={meta.description} />
-        </Helmet>
-        <Row className="mb-5 mt-3 pt-md-3">
-          <Col lg="8">
-            <h1 className="display-4 mb-4"> Portfolio </h1>{" "}
-            <hr className="t_border my-4 ml-0 text-left" />
-          </Col>
-        </Row>
-        <div className="mb-5 po_items_ho">
-          {dataportfolio.map((data, i) => {
-            return (
-              <div key={i} className="po_item">
-                <img src={data.img} alt="" />
-                <div className="content">
-                  <p>{data.description}</p>
-                  <a href={data.link}>view project</a>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </Container>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title> Portfolio | {meta.title} </title>
+        <meta name="description" content={meta.description} />
+      </Helmet>
+      <nav className="portfolio-navbar">
+        <ul>
+          <li onClick={() => handleScroll('code-section')}>Code</li>
+          <li onClick={() => handleScroll('motorcycles-section')}>Motorcycles</li>
+          <li onClick={() => handleScroll('snowsports-section')}>Snowsports</li>
+        </ul>
+      </nav>
+      <div className="portfolio-content">
+        <section id="code-section" className="portfolio-section">
+          <h2>Code</h2>
+        </section>
+        <section id="motorcycles-section" className="portfolio-section">
+          <h2>Motorcycles</h2>
+        </section>
+        <section id="snowsports-section" className="portfolio-section">
+          <h2>Snowsports</h2>
+        </section>
+      </div>
     </HelmetProvider>
   );
-};
+}
+
