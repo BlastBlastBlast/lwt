@@ -149,19 +149,25 @@
 
 @media (orientation: portrait) {
   .bike-wide-img-container {
-    width: 900px;
+    width: 100vw;
+    max-width: 100vw;
     height: 572px;
     max-height: 100vh;
+    margin: 0 auto 2rem auto;
+    overflow: hidden;
   }
   .bike-wide-img {
-    width: 900px;
+    width: 100vw;
+    max-width: 100vw;
     height: 572px;
     object-fit: cover;
     object-position: right center;
     display: block;
     border: none;
+    transition: object-position 0.3s;
   }
 }
+
 
 /* Default fallback: show full image */
 .bike-wide-img {
@@ -179,7 +185,7 @@
   left: 0;
   right: auto;
   top: auto;
-  font-size: 11rem;
+  font-size: clamp(2rem, 16vw, 11rem);
   font-family: 'JetBrains Mono', 'Fira Mono', 'Menlo', 'monospace';
   font-weight: 900;
   color: #fff;
