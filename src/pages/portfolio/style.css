@@ -161,7 +161,7 @@
     max-width: 100vw;
     height: 572px;
     object-fit: cover;
-    object-position: right center;
+    object-position: 120% center;
     display: block;
     border: none;
     transition: object-position 0.3s;
