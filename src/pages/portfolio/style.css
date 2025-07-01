@@ -99,11 +99,15 @@
   position: relative;
   width: 900px;
   height: 572px;
-  margin: 0 auto;
+  margin: 0 auto 2rem auto;
   overflow: hidden;
   background: #222;
   display: flex;
   align-items: flex-start;
+}
+
+.bike-wide-img-container + .bike-wide-img-container {
+  margin-top: 0;
 }
 
 @media (orientation: landscape) {
@@ -171,22 +175,27 @@
 
 .bike-wide-title-overlay {
   position: absolute;
-  bottom: 0.1rem;
-  left: 0.1rem;
-  top: auto;
+  bottom: 0;
+  left: 0;
   right: auto;
+  top: auto;
   font-size: 11rem;
   font-family: 'JetBrains Mono', 'Fira Mono', 'Menlo', 'monospace';
   font-weight: 900;
   color: #fff;
   letter-spacing: 0.02em;
-  line-height: 1.1;
+  line-height: 1;
   z-index: 2;
   user-select: none;
   pointer-events: none;
   background: none;
   padding: 0;
   border-radius: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
 }
 
 .po_item:hover .content {
