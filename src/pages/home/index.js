@@ -17,37 +17,22 @@ export const Home = () => {
         </Helmet>
         <div className="intro_sec d-block d-lg-flex align-items-center ">
           <div
-            className="h_bg-image order-1 order-lg-2 h-100 home-img-sweep-container"
-            style={{ background: 'none', position: 'relative', maxWidth: 400, margin: '0 auto' }}
+            className="h_bg-image order-1 order-lg-2 h-100 home-img-swap-container"
+            style={{ background: 'none', maxWidth: 400, margin: '0 auto', textAlign: 'center' }}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
             <img
-              src={introdata.your_img_url}
-              alt="LWT Logo base"
-              className="home-img-sweep-base"
+              src={hovered ? '/img_assets/lwt_helmet.png' : introdata.your_img_url}
+              alt="LWT Logo"
               style={{
                 width: '100%',
                 height: 'auto',
                 display: 'block',
-                position: 'relative',
-                zIndex: 1
-              }}
-            />
-            <img
-              src={'/img_assets/lwtHelmet.png'}
-              alt="LWT Logo helmet"
-              className={`home-img-sweep-top${hovered ? ' home-img-sweep-top--active' : ''}`}
-              style={{
-                width: '100%',
-                height: 'auto',
-                display: 'block',
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                zIndex: 2,
-                pointerEvents: 'none',
-                transition: 'clip-path 0.22s cubic-bezier(0.7,0,0.7,1)'
+                margin: '0 auto',
+                maxWidth: '100%',
+                maxHeight: '60vh',
+                objectFit: 'contain'
               }}
             />
           </div>
