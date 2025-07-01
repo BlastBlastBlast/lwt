@@ -4,6 +4,7 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import { introdata, meta } from "../../content_option";
 import { Link } from "react-router-dom";
+import GitHubStats from "../../components/GitHubStats";
 
 export const Home = () => {
   const [hovered, setHovered] = React.useState(false);
@@ -85,6 +86,9 @@ export const Home = () => {
                     </div>
                   </Link>
                 </div>
+              </div>
+              <div style={{ marginTop: 32, borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 24 }}>
+                <GitHubStats />
               </div>
             </div>
           </div>
