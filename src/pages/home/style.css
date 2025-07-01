@@ -151,6 +151,31 @@ section {
     }
 }
 
+/* 45-degree sweep effect for home image hover */
+.home-img-sweep-container {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.home-img-sweep-base {
+    z-index: 1;
+}
+.home-img-sweep-top {
+    z-index: 2;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transition: clip-path 0.11s cubic-bezier(0.7,0,0.7,1);
+}
+.home-img-sweep-top--active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
 @media (min-width: 1400px) {
     .intro_sec .h_bg-image {
         transform: scale(1.05);

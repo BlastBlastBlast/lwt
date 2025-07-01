@@ -6,6 +6,7 @@ import { introdata, meta } from "../../content_option";
 import { Link } from "react-router-dom";
 
 export const Home = () => {
+  const [hovered, setHovered] = React.useState(false);
   return (
     <HelmetProvider>
       <section id="home" className="home">
@@ -16,9 +17,40 @@ export const Home = () => {
         </Helmet>
         <div className="intro_sec d-block d-lg-flex align-items-center ">
           <div
-            className="h_bg-image order-1 order-lg-2 h-100 "
-            style={{ backgroundImage: `url(${introdata.your_img_url})` }}
-          ></div>
+            className="h_bg-image order-1 order-lg-2 h-100 home-img-sweep-container"
+            style={{ background: 'none', position: 'relative', maxWidth: 400, margin: '0 auto' }}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
+            <img
+              src={introdata.your_img_url}
+              alt="LWT Logo base"
+              className="home-img-sweep-base"
+              style={{
+                width: '100%',
+                height: 'auto',
+                display: 'block',
+                position: 'relative',
+                zIndex: 1
+              }}
+            />
+            <img
+              src={'/img_assets/lwtHelmet.png'}
+              alt="LWT Logo helmet"
+              className={`home-img-sweep-top${hovered ? ' home-img-sweep-top--active' : ''}`}
+              style={{
+                width: '100%',
+                height: 'auto',
+                display: 'block',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                zIndex: 2,
+                pointerEvents: 'none',
+                transition: 'clip-path 0.22s cubic-bezier(0.7,0,0.7,1)'
+              }}
+            />
+          </div>
           <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
             <div className="align-self-center ">
               <div className="intro mx-auto">
