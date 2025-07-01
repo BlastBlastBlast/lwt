@@ -32,6 +32,18 @@ export const Portfolio = () => {
         </section>
         <section id="motorcycles-section" className="portfolio-section">
           <h2>Motorcycles</h2>
+          <a className="bike-portfolio-link" href="/portfolio/motorcycles/tr1">
+            <div className="bike-wide-img-container">
+              <img src="/img_assets/motorcycles/Tr1_2.jpg" alt="TR1" className="bike-wide-img" />
+              <div className="bike-wide-title-overlay">83'TR1</div>
+            </div>
+          </a>
+          <a className="bike-portfolio-link" href="/portfolio/motorcycles/bmw">
+            <div className="bike-wide-img-container">
+              <img src="/img_assets/motorcycles/bmw_2.jpg" alt="BMW 76'R100" className="bike-wide-img" />
+              <div className="bike-wide-title-overlay">76'R100</div>
+            </div>
+          </a>
         </section>
         <section id="snowsports-section" className="portfolio-section">
           <h2>Snowsports</h2>
