@@ -39,7 +39,7 @@ export const Portfolio = () => {
             </div>
           </a>
           <a className="bike-portfolio-link" href="/portfolio/motorcycles/bmw">
-            <div className="bike-wide-img-container">
+            <div className="bike-wide-img-container bike-wide-img-container-bmw">
               <img src="/img_assets/motorcycles/bmw_2.jpg" alt="BMW 76'R100" className="bike-wide-img bike-wide-img-bmw" />
               <div className="bike-wide-title-overlay">76'R100</div>
             </div>

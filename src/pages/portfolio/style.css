@@ -98,7 +98,7 @@
 .bike-wide-img-container {
   position: relative;
   width: 900px;
-  height: 520px;
+  height: 572px;
   margin: 0 auto;
   overflow: hidden;
   background: #222;
@@ -110,13 +110,13 @@
   .bike-wide-img-container {
     width: 900px;
     height: 60%; /* container height is 60% of its normal height */
-    max-height: 312px; /* 60% of 520px */
+    max-height: 343px; /* 60% of 572px */
     position: relative;
     overflow: hidden;
   }
   .bike-wide-img {
     width: 900px;
-    height: 520px;
+    height: 572px;
     object-fit: cover;
     object-position: top center;
     display: block;
@@ -124,23 +124,34 @@
     position: static;
     top: auto;
   }
-  .bike-wide-img-bmw {
-    object-position: center 86%; /* 86% from top is bottom 60% of image */
-    position: static;
+  .bike-wide-img-container-bmw {
+    height: 343px;
     width: 900px;
-    height: 520px;
+    overflow: hidden;
+    position: relative;
+  }
+  .bike-wide-img-container-bmw .bike-wide-img-bmw {
+    position: absolute;
+    left: 0;
+    bottom: -125px;
+    width: 900px;
+    height: 572px;
+    object-fit: cover;
+    object-position: center bottom;
+    border: none;
+    display: block;
   }
 }
 
 @media (orientation: portrait) {
   .bike-wide-img-container {
     width: 900px;
-    height: 520px;
+    height: 572px;
     max-height: 100vh;
   }
   .bike-wide-img {
     width: 900px;
-    height: 520px;
+    height: 572px;
     object-fit: cover;
     object-position: right center;
     display: block;
@@ -151,7 +162,7 @@
 /* Default fallback: show full image */
 .bike-wide-img {
   width: 900px;
-  height: 520px;
+  height: 572px;
   object-fit: cover;
   object-position: center center;
   display: block;
