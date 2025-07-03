@@ -19,7 +19,7 @@ export const Home = () => {
         <div className="intro_sec d-block d-lg-flex align-items-center ">
           <div
             className="h_bg-image order-1 order-lg-2 h-100 home-img-swap-container"
-            style={{ background: 'none', maxWidth: 400, margin: '0 auto', textAlign: 'center' }}
+            style={{ background: 'none', margin: '0 auto', textAlign: 'center', height: '100%' }}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >
@@ -28,11 +28,11 @@ export const Home = () => {
               alt="LWT Logo"
               style={{
                 width: '100%',
-                height: 'auto',
+                height: '70vh',
                 display: 'block',
                 margin: '0 auto',
                 maxWidth: '100%',
-                maxHeight: '60vh',
+                maxHeight: '70vh',
                 objectFit: 'contain'
               }}
             />
