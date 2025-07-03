@@ -167,14 +167,14 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease-out;
-    transform-origin: center;
+    /* transition: transform 0.3s ease-out; */
+    /* transform-origin: center; */
 }
 
 /* Scale effect for larger screens */
 @media (min-width: 1200px) {
     .intro_sec .h_bg-image {
-        transform: scale(1);
+        /* No scale effect */
     }
 }
 
@@ -205,20 +205,20 @@ section {
 
 @media (min-width: 1400px) {
     .intro_sec .h_bg-image {
-        transform: scale(1.05);
+        /* No scale effect */
     }
 }
 
 @media (min-width: 1600px) {
     .intro_sec .h_bg-image {
-        transform: scale(1.1);
+        /* No scale effect */
     }
 }
 
 /* Hover effect for better interactivity */
 @media (hover: hover) {
     .intro_sec .h_bg-image:hover {
-        transform: scale(1.05);
+        /* No scale effect */
     }
 }
 
