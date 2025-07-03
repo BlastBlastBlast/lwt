@@ -46,7 +46,9 @@ const skills = [
             { name: "C", icon: "FaCodeC" }, // Using FaCodeC for C
             { name: "Python", icon: "FaPython" },
             { name: "JavaScript", icon: "FaJs" },
-            { name: "TypeScript", icon: "SiTypescript" }
+            { name: "TypeScript", icon: "SiTypescript" },
+            { name: "HTML", icon: "FaHtml5" },
+            { name: "CSS", icon: "FaCss3" }
         ]
     },
     {
@@ -56,15 +58,15 @@ const skills = [
             { name: "Node.js", icon: "FaNodeJs" },
             { name: "Spring", icon: "SiSpring" },
             { name: "Express", icon: "SiExpress" },
-            { name: "Tailwind CSS", icon: "SiTailwindcss" }
+            { name: "Tailwind CSS", icon: "SiTailwindcss" },
+            { name: "Vite", icon: "FaBolt" },
+            { name: "Jetpack Compose", icon: "SiJetpackcompose" }
         ]
     },
     {
         category: "Tools & Technologies",
         items: [
             { name: "Git", icon: "FaGitAlt" },
-            { name: "Docker", icon: "FaDocker" },
-            { name: "AWS", icon: "FaAws" },
             { name: "PostgreSQL", icon: "SiPostgresql" }
         ]
     }

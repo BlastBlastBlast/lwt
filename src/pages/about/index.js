@@ -3,10 +3,10 @@ import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { 
-  FaJava, FaPython, FaJs, FaReact, FaNodeJs, FaGitAlt, FaDocker, FaAws, FaLinux, FaBootstrap, FaCode
+  FaJava, FaPython, FaJs, FaReact, FaNodeJs, FaGitAlt, FaDocker, FaAws, FaLinux, FaBootstrap, FaCode, FaHtml5, FaCss3, FaBolt
 } from "react-icons/fa";
 import {
-  SiKotlin, SiTypescript, SiSpring, SiExpress, SiTailwindcss, SiPostgresql, SiMongodb, SiJavascript
+  SiKotlin, SiTypescript, SiSpring, SiExpress, SiTailwindcss, SiPostgresql, SiMongodb, SiJavascript, SiJetpackcompose
 } from "react-icons/si";
 
 // Fix for C icon since it's not available in react-icons
@@ -33,6 +33,10 @@ const iconComponents = {
   'FaBootstrap': FaBootstrap,
   'FaCode': FaCode,
   'FaCodeC': FaCodeC, // For C language
+  'FaHtml5': FaHtml5,
+  'FaCss3': FaCss3,
+  'FaBolt': FaBolt,
+  'SiJetpackcompose': SiJetpackcompose,
   'SiKotlin': SiKotlin,
   'SiTypescript': SiTypescript,
   'SiSpring': SiSpring,
