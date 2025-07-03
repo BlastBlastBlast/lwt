@@ -48,7 +48,8 @@ const skills = [
             { name: "JavaScript", icon: "FaJs" },
             { name: "TypeScript", icon: "SiTypescript" },
             { name: "HTML", icon: "FaHtml5" },
-            { name: "CSS", icon: "FaCss3" }
+            { name: "CSS", icon: "FaCss3" },
+            { name: "SQL", icon: "FaCode" }
         ]
     },
     {
@@ -60,14 +61,19 @@ const skills = [
             { name: "Express", icon: "SiExpress" },
             { name: "Tailwind CSS", icon: "SiTailwindcss" },
             { name: "Vite", icon: "FaBolt" },
-            { name: "Jetpack Compose", icon: "SiJetpackcompose" }
+            { name: "Jetpack Compose", icon: "SiJetpackcompose" },
+            { name: "Gradle", icon: "FaCode" },
+            { name: "Maven", icon: "FaCode" }
         ]
     },
     {
         category: "Tools & Technologies",
         items: [
             { name: "Git", icon: "FaGitAlt" },
-            { name: "PostgreSQL", icon: "SiPostgresql" }
+            { name: "GitHub", icon: "img:github.svg" },
+            { name: "PostgreSQL", icon: "SiPostgresql" },
+            { name: "Ghidra", icon: "img:ghidra.svg" },
+            { name: "Ida", icon: "img:ida.svg" }
         ]
     }
 ];

@@ -46,6 +46,17 @@ const iconComponents = {
   'SiMongodb': SiMongodb
 };
 
+// Helper to render either react-icon or image icon
+const renderSkillIcon = (icon) => {
+  if (icon && icon.startsWith('img:')) {
+    // e.g. icon: 'img:github.svg'
+    const imgName = icon.replace('img:', '');
+    return <img src={process.env.PUBLIC_URL + '/img_assets/' + imgName} alt="" style={{ width: 20, height: 20, verticalAlign: 'middle' }} />;
+  }
+  const IconComponent = iconComponents[icon];
+  return IconComponent ? <IconComponent size={20} /> : null;
+};
+
 export const About = () => {
   return (
     <HelmetProvider>
@@ -101,17 +112,14 @@ export const About = () => {
                 <div key={i} className="skill-category mb-5">
                   <h4 className="skill-category-title mb-3">{category.category}</h4>
                   <div className="skills-list">
-                    {category.items.map((item, j) => {
-                      const IconComponent = iconComponents[item.icon];
-                      return (
-                        <div key={j} className="skill-item">
-                          <span className="skill-icon">
-                            {IconComponent && <IconComponent size={20} />}
-                          </span>
-                          <span className="skill-name">{item.name}</span>
-                        </div>
-                      );
-                    })}
+                    {category.items.map((item, j) => (
+                      <div key={j} className="skill-item">
+                        <span className="skill-icon">
+                          {renderSkillIcon(item.icon)}
+                        </span>
+                        <span className="skill-name">{item.name}</span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               ))}
