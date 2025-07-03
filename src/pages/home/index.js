@@ -41,33 +41,47 @@ export const Home = () => {
             <div className="align-self-center ">
               <div className="intro mx-auto">
                 <h2 className="mb-1x">{introdata.title}</h2>
-                <h1 className="fluidz-48 mb-1x">
-                  <Typewriter
-                    onInit={(typewriter) => {
-                      typewriter
-                        .typeString(introdata.animated.first)
-                        .pauseFor(1000)
-                        .deleteAll()
-                        .typeString(introdata.animated.second)
-                        .pauseFor(1000)
-                        .deleteAll()
-                        .typeString(introdata.animated.third)
-                        .pauseFor(1000)
-                        .start();
-                    }}
-                    options={{
-                      autoStart: true,
-                      loop: true,
-                      typeSpeed: 30,
-                      deleteSpeed: 15,
-                      delay: 50,
-                      cursor: '|',
-                      wrapperClassName: 'Typewriter__wrapper',
-                      cursorClassName: 'Typewriter__cursor'
-                    }}
-                  />
-                </h1>
-                <p className="mb-1x">{introdata.description}</p>
+                <div className="typewriter-static-box" style={{
+                  height: 'calc(3 * 48px)',
+                  overflow: 'hidden',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}>
+                  <h1 className="fluidz-48 mb-1x" style={{ margin: 0 }}>
+                    <Typewriter
+                      onInit={(typewriter) => {
+                        typewriter
+                          .typeString(introdata.animated.first)
+                          .pauseFor(1000)
+                          .deleteAll()
+                          .typeString(introdata.animated.second)
+                          .pauseFor(1000)
+                          .deleteAll()
+                          .typeString(introdata.animated.third)
+                          .pauseFor(1000)
+                          .start();
+                      }}
+                      options={{
+                        autoStart: true,
+                        loop: true,
+                        typeSpeed: 30,
+                        deleteSpeed: 15,
+                        delay: 50,
+                        cursor: '|',
+                        wrapperClassName: 'Typewriter__wrapper',
+                        cursorClassName: 'Typewriter__cursor'
+                      }}
+                    />
+                  </h1>
+                </div>
+                <p className="mb-1x">
+                  {introdata.description.split('\n').map((line, idx) => (
+                    <React.Fragment key={idx}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ))}
+                </p>
                 <div className="intro_btn-action pb-5">
                   <Link to="/portfolio" className="text_2">
                     <div id="button_p" className="ac_btn btn ">

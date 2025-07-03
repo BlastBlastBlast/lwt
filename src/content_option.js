@@ -11,7 +11,7 @@ const introdata = {
         second: "I’ve led teams, projects, and powder days",
         third: "I blend logic, leadership, and a bit of grease",
     },
-    description: "Welcome to my personal space where I share my work and thoughts on technology and development.",
+    description: "Leadership graduate turned code wrangler. \n\n Former extreme sports athlete (yes, I did hurl myself off cliffs on skis). Now studying IT at the University of Oslo while moonlighting as a hobby motorcycle mechanic and designer.",
     your_img_url: "/img_assets/LWT_Transparent.png",
 };
 
