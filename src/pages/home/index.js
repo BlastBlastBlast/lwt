@@ -91,6 +91,14 @@ export const Home = () => {
                       <div className="ring three"></div>
                     </div>
                   </Link>
+                  <Link to="/about" className="text_2">
+                    <div id="button_a" className="ac_btn btn ">
+                      About
+                      <div className="ring one"></div>
+                      <div className="ring two"></div>
+                      <div className="ring three"></div>
+                    </div>
+                  </Link>
                   <Link to="/contact">
                     <div id="button_h" className="ac_btn btn">
                       Contact Me
@@ -101,7 +109,7 @@ export const Home = () => {
                   </Link>
                 </div>
               </div>
-              <div style={{ marginTop: 32, borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 24 }}>
+              <div style={{ marginTop: 12 }}>
                 <GitHubStats />
               </div>
             </div>
