@@ -28,11 +28,11 @@ export const Home = () => {
               alt="LWT Logo"
               style={{
                 width: '100%',
-                height: '70vh',
+                height: '90vh',
                 display: 'block',
                 margin: '0 auto',
                 maxWidth: '100%',
-                maxHeight: '70vh',
+                maxHeight: '90vh',
                 objectFit: 'contain'
               }}
             />
@@ -109,9 +109,13 @@ export const Home = () => {
                   </Link>
                 </div>
               </div>
-              <div style={{ marginTop: 12 }}>
-                <GitHubStats />
-              </div>
+              <div className="university-logos" style={{ display: 'flex', justifyContent: 'center', gap: 32, margin: '0' }}>
+  <img src="/img_assets/Universities/Kristiania_Svg_BLK.svg" alt="Kristiania University Logo" className="uni-logo-svg" style={{ height: 96 }} />
+  <img src="/img_assets/Universities/UIO_Svg_BLK.svg" alt="University of Oslo Logo" className="uni-logo-svg" style={{ height: 96 }} />
+</div>
+<div style={{ marginTop: 12 }}>
+  <GitHubStats />
+</div>
             </div>
           </div>
         </div>
